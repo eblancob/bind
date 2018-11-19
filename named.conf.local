@@ -6,3 +6,12 @@
 // organization
 //include "/etc/bind/zones.rfc1918";
 
+zone "blanco.local" {
+	type master;
+	file "/var/lib/bind/db.blanco";
+};
+
+zone "5.16.172.in-addr.arpa" {
+	type master;
+	file "/var/lib/bind/db.5.16.172";
+};
