@@ -1,0 +1,16 @@
+;
+; BIND reverse data file for broadcast zone
+;
+$TTL	604800
+@	IN	SOA	blanco.local. root.blanco.local. (
+		     2018111901		; Serial
+			     60		; Refresh
+			    150		; Retry
+			    300		; Expire
+			    60 )	; Negative Cache TTL
+;
+@	IN	NS	ns.blanco.local.
+
+10	IN	PTR	ns.blanco.local.
+	IN	PTR	dserver00.blanco.local.
+20	IN	PTR	uclient01.blanco.local.
