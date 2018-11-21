@@ -6,12 +6,17 @@
 // organization
 //include "/etc/bind/zones.rfc1918";
 
+
+include "/etc/bind/ddns.key";
+
 zone "blanco.local" {
 	type master;
 	file "/var/lib/bind/db.blanco";
+	allow-update { key DDNS_UPDATER; };
 };
 
 zone "5.16.172.in-addr.arpa" {
 	type master;
 	file "/var/lib/bind/db.5.16.172";
+	allow-update { key DDNS_UPDATER; };
 };
